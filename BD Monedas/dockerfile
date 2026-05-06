@@ -1,0 +1,6 @@
+#Descargar la imagen oficial de Postgres desde Docker Hub
+FROM postgres:latest
+
+#Copiar los scripts DDL y DML a la carpeta de inicialización
+COPY DDL_Monedas.sql /docker-entrypoint-initdb.d/
+COPY DML_Monedas.sql /docker-entrypoint-initdb.d/
